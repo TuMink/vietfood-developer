@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Đăng ký - VietFood</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="style_signup.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="../../index.html" class="logo">
+            <img src="../../images_mainPage/logo.png" alt="Logo" />
+        </a>
+        <nav class="navbar">
+            <a href="../../trangChu.html#home">Trang chủ</a>
+            <a href="../../trangChu.html#about">Giới thiệu</a>
+            <a href="../../index.html">Menu</a>
+            <a href="../../trangChu.html#contact">Liên hệ</a>
+            <a href="../login/index.html" id="login-link">Đăng nhập</a>
+            <a href="#" id="register-link">Đăng ký</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="register-container">
+            <h2>Đăng ký tài khoản</h2>
+            <form>
+                <div class="form-group">
+                    <label for="fullname">Họ và tên</label>
+                    <input type="text" id="fullname" name="fullname" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" name="password" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Xác nhận mật khẩu</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required />
+                </div>
+
+                <button type="submit" class="register-btn">Đăng ký</button>
+
+                <div class="login-link">
+                    Đã có tài khoản? <a href="../login/index.html">Đăng nhập</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 VietFood.</p>
+    </footer>
+
+    <script src="signup.js"></script>
+
+</body>
+
+</html>

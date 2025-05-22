@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VietFood - Đồ ăn Viet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="trangChu.html#" class="logo">
+            <img src="images_mainPage/logo.png" alt="Logo">
+        </a>
+        <nav class="navbar">
+            <a href="trangChu.html#home">Trang chủ</a>
+            <a href="trangChu.html#about">Giới thiệu</a>
+            <a href="index.html">Menu</a>
+            <a href="trangChu.html#contact">Liên hệ</a>
+            <a href="authenticate/login/index.html" id="login-link">Đăng nhập</a>
+            <a href="authenticate/signup/index.html" id="register-link">Đăng ký</a>
+
+            <div id="user-box" class="user-box" style="display: none;">
+                <span id="user-name">👤 Tên người dùng</span>
+                <div id="user-menu" class="user-menu" style="display: none;">
+                    <a href="#" id="logout-btn">Đăng xuất</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- tìm kiếm-->
+    <div>
+        <input type="text" id="search-input" placeholder="Tìm món ăn...">
+    </div>
+    <!-- thực đơn -->
+    <main id="menu">
+    </main>
+    <div id="gio-hang-popup" class="modal">
+        <div class="modal-content">
+            <span id="dong-gio">&times;</span>
+            <h2>🛒 Món đã chọn</h2>
+            <ul id="ds-mua"></ul>
+            <p><strong>Tổng tiền:</strong> <span id="tong-tien-popup">0</span> VNĐ</p>
+        </div>
+    </div>
+    <footer>
+        <button id="xem-gio">🛒 Giỏ hàng <span id="so-luong">0</span></button>
+    </footer>
+    <script src="timKiem.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

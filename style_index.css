@@ -1,0 +1,297 @@
+/* Reset và font cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #fffdf9;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #4caf50;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffd700;
+}
+
+/* Banner */
+.banner-section {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    background: url('images_mainPage/banner.jpg') no-repeat center center/cover;
+}
+
+.banner-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* lớp phủ tối */
+    z-index: 1;
+}
+
+.banner {
+    position: relative;
+    z-index: 2;
+}
+
+.banner h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    animation: slideUp 1s ease forwards;
+}
+
+.banner p {
+    font-size: 18px;
+    opacity: 0.9;
+    animation: fadeIn 1.2s ease forwards;
+    animation-delay: 0.5s;
+}
+
+/* Animation keyframes */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Giới thiệu */
+.intro-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro-section h2:hover {
+    color: #4caf50;
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+/* Team */
+.team-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.team-member {
+    width: 180px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Menu */
+.menu-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #4caf4f8f;
+}
+
+.menu-section h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu-item {
+    width: 250px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.menu-item-details {
+    padding: 15px;
+}
+
+.menu-item-details h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.menu-item-details p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Liên hệ */
+#contact {
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* User login box */
+.user-box {
+    position: relative;
+    cursor: pointer;
+    color: #444;
+    font-weight: 600;
+}
+
+.user-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    min-width: 120px;
+    z-index: 999;
+}
+
+.user-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #444;
+}
+
+.user-menu a:hover {
+    background-color: #f0f0f0;
+}
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.menu-more-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-more-btn {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
