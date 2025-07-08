@@ -150,7 +150,6 @@ class thucDon {
     capNhatSoLuong(index, soLuong) {
         if (index >= 0 && index < this.#gioHang.length) {
             this.#gioHang[index].soLuong = soLuong;
-
             // Nếu số lượng = 0, xóa món khỏi giỏ
             if (soLuong <= 0) {
                 this.xoaKhoiGio(index);
@@ -271,7 +270,6 @@ function hienThiGioHang() {
             dsMua.appendChild(li);
         });
 
-        // Thêm sự kiện cho các nút
         document.querySelectorAll(".btn-giam").forEach(btn => {
             btn.addEventListener("click", function () {
                 const index = parseInt(this.getAttribute("data-index"));
