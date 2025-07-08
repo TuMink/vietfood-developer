@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const newUser = {
       fullname,
       email,
-      password, // Có thể mã hóa nếu cần bảo mật
+      password,
     };
 
     // Lấy danh sách user hiện tại trong localStorage

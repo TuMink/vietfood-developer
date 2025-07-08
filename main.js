@@ -26,7 +26,10 @@ class monAn {
         this.#hinhAnh = val;
     }
     moTa() {
-        return `Món ${this.#ten}, giá ${this.#gia} VNĐ`;
+        return `
+            <p>Món ${this.#ten}</p>
+            <p>Giá ${this.#gia} VNĐ</p>
+        `;
     }
     toJSON() {
         return {
@@ -95,7 +98,24 @@ class thucDon {
             new monAn("Bánh Mì", 20000, "images/banhmi.jpg"),
             new monAn("Chả Giò", 25000, "images/chagio.jpg"),
             new monAn("Bún đậu mắm tôm", 30000, "images/bundaumamtom.jpg"),
-            new monAn("Nem nướng Nha Trang", 25000, "images/nemnuong.jpg")
+            new monAn("Nem nướng Nha Trang", 25000, "images/nemnuong.jpg"),
+            new monAn("Cơm Tấm", 30000, "images/comtam.jpg"),
+            new monAn("Gỏi Cuốn", 20000, "images/goicuon.jpg"),
+            new monAn("Bánh Xèo", 30000, "images/banhxeo.jpg"),
+            new monAn("Hủ Tiếu", 35000, "images/hutieu.jpg"),
+            new monAn("Bánh Bèo", 20000, "images/banhbeo.jpg"),
+            new monAn("Bánh Khọt", 25000, "images/banhkhot.jpg"),
+            new monAn("Bánh Tôm Hồ Tây", 30000, "images/banhtom.jpg"),
+            new monAn("Bánh Trôi Tàu", 15000, "images/banhtroitau.jpg"),
+            new monAn("Mì Quảng", 40000, "images/miquang.jpg"),
+            new monAn("Bánh Canh", 30000, "images/banhcanh.jpg"),
+            new monAn("Bánh Cuốn", 25000, "images/banhcuon.jpg"),
+            new monAn("Bánh Bột Lọc", 20000, "images/banhbotloc.jpg"),
+            new monAn("Bánh Tráng Trộn", 15000, "images/banhtrangtron.jpg"),
+            new monAn("Chè Ba Màu", 20000, "images/chebamau.jpg"),
+            new monAn("Chè Thái", 25000, "images/chethai.jpg"),
+            new monAn("Chè Bưởi", 20000, "images/chebuoi.jpg"),
+            new monAn("Chè Đỗ Đen", 15000, "images/chedoden.jpg"),
         ];
         this.#gioHang = [];
         this.taiLaiGioHang();
