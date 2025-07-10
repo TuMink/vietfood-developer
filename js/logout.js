@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     logoutBtn.addEventListener("click", function (e) {
         e.preventDefault();
         localStorage.removeItem("loggedInUser");
-        // show popup notification
         const popup = document.createElement("div");
         popup.textContent = "Bạn đã đăng xuất thành công!";
         popup.style.position = "fixed";
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         popup.style.zIndex = "10000";
         popup.style.fontSize = "1.2rem";
         document.body.appendChild(popup);
-        // time out 2s hide popup, navigate to trangchu
         setTimeout(() => {
             document.body.removeChild(popup);
             window.location.href = "trangChu.html";
